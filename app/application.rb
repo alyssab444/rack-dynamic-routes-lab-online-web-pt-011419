@@ -10,5 +10,7 @@ class Application
        @@items.each do |item|
          resp.write "{item.price}/n"
        end 
-     else req.path.match 
+    else 
+     resp.write "Route not found"
+      resp.status = 404
 end 
